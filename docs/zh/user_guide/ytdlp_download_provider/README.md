@@ -40,6 +40,7 @@ yt-dlp:
   target_format: mp4
   download_proxy: http://192.168.1.8:1087
   priority: 0
+  handle_all_host: true
   handle_host:
     - www.youtube.com
     - www.bilibili.com
@@ -55,6 +56,7 @@ yt-dlp:
 * `target_format`: 转化目标视频格式。
 * `download_proxy`: 下载代理，国外内容可能需要代理。
 * `priority`: 下载提供器优先级，数字越小，优先级越高，下载资源时按优先级尝试，无法下载或下载失败时切换下载器。
+* `handle_all_host`: 是否处理所有网站，默认为false，只处理配置的host。
 * `handle_host`: 支援的资源网站，可以配置`yt-dlp`所支持的网站。
 
 #### 2. 为yt-dlp配置cookie
