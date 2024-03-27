@@ -75,6 +75,7 @@ class XunleiDownloadProvider(provider.DownloadProvider):
             js_text = js_file.read()
         self.js_ctx = execjs.compile(js_text)
         self.device_id = cfg.get('device_id', '')
+        self.pan_auth = cfg.get('pan_auth', None)
 
     def list_files(self, token: str, url: str) -> dict:
         try:
@@ -202,6 +203,9 @@ class XunleiDownloadProvider(provider.DownloadProvider):
         xunlei_e = int(time.time())
         xunlei_cn = int(time.time())
         try:
+            if self.pan_auth is not None:
+                return self.pan_auth
+
             rep = self.request_handler.get(self.http_endpoint + '/webman/3rdparty/pan-xunlei-com/index.cgi/device/now',
                                            timeout=30)
             xunlei_a1 = int(json.loads(rep.text).get('now'))

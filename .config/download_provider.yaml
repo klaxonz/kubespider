@@ -55,6 +55,7 @@ xunlei:
   enable: false
   token_js_path: "/app/.config/dependencies/xunlei_download_provider/get_token.js"
   http_endpoint: http://127.0.0.1:2345
+  pan_auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJVSUF1dGgiLCJleHAiOjE3MTE3ODM2MzYsImlhdCI6MTcxMTUyNDQzNiwibmJmIjoxNzExNTI0NDM2fQ.JugX5pLnbupgXl45bu622XGoSoWvUuuzX_8HI-Y-6Qw
   device_id: 5c78ea560a34ed4b4fbe6686da1172b4
   priority: 4
 transmission:
